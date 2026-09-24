@@ -1,0 +1,53 @@
+DOCUMENT TITLE: Strategic Plan for Enterprise Power BI Dashboard
+PROJECT: Financial Analytics & Business Intelligence Implementation
+AUTHOR: Business Analyst
+EFFORT ESTIMATE: 32 Hours (4 Weeks)
+1. EXECUTIVE SUMMARY
+1.1 Project Purpose
+The primary objective of this project is to develop an enterprise-grade Power BI
+dashboard that transforms raw financial operational data into interactive, real-time
+insights. By automating financial reporting, this dashboard reduces manual effort
+and enables data-driven decision-making across leadership teams.
+1.2 Business Questions Answered
+• What is our total revenue, total profit, and net profit margin percentage across global
+markets?
+• Which countries drive peak sales and yield the highest profitability?
+• What are our revenue and profit performance trends over time?
+• How do sales vary across different product lines and customer segments?
+2. DATA ARCHITECTURE & FUNCTIONAL REQUIREMENTS
+2.1 Data Ingestion & Source Data
+• Primary Source: Financial Operations Dataset (financials)
+• Data Fields: Segment, Country, Product, Discount Band, Units Sold, Sale Price,
+ Gross Sales, Discounts, Sales, COGS, Profit, Date.
+2.2 ETL & Data Transformations (Power Query)
+• Data Type Verification: Ensure sales/financial metrics are formatted as
+Decimal/Currency,
+ dates as Date objects, and categorical attributes as Text.
+• Data Cleansing: Remove null values, validate schema consistency, and handle missing
+entries.
+2.3 Data Modeling & DAX Calculation Engine
+• Architecture: Star Schema approach separating dimensions from numerical facts.
+• Explicit DAX Measures:
+ - Total Revenue = SUM(financials[Sales])
+ - Total Profit = SUM(financials[Profit])
+ - Profit Margin % = DIVIDE([Total Profit], [Total Revenue], 0)
+3. KEY PERFORMANCE INDICATORS (KPIs)
+• Financial Health: Total Revenue ($26.42M), Total Profit ($3.88M), Gross Profit Margin %
+(14.68%).
+• Market Performance: Country Sales Volume (Total Revenue by Country).
+• Temporal Trends: Yearly Profit Performance (Total Profit by Year).
+4. DASHBOARD VISUAL PROTOTYPE
+5. PROJECT MILESTONES & WORK BREAKDOWN STRUCTURE (32 HOURS)
+Phase 1: Discovery & Data Preparation (Week 1 - 8 Hours)
+• Define business questions and KPI criteria.
+• Connect Power BI to source data and execute ETL transformations in Power Query.
+Phase 2: Data Modeling & Measure Development (Week 2 - 8 Hours)
+• Construct relational model and setup dedicated measures repository.
+• Author core DAX logic for business metrics and time-intelligence analyses.
+Phase 3: Visual Design & Interactivity (Week 3 - 10 Hours)
+• Design canvas visual layout (KPI Cards, Bar Charts, Line Charts, Slicers).
+• Configure drill-through features, cross-filtering, and UI usability standards.
+Phase 4: Security, Deployment & Acceptance (Week 4 - 6 Hours)
+• Implement Row-Level Security (RLS) for role-based data visibility.
+• Publish report to Power BI Service workspace and complete User Acceptance Testing
+(UAT).
